@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Condai.Tools", "..\Backend\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Condai.Rest", "..\Service\Condai.Rest\Condai.Rest.csproj", "{8C7B9846-5F6C-4C92-B98C-8BB9A00BBA98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console.App", "..\Backend\Console.App\Console.App.csproj", "{8ACD7267-8A0B-46C0-A681-32F511127B78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{8C7B9846-5F6C-4C92-B98C-8BB9A00BBA98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C7B9846-5F6C-4C92-B98C-8BB9A00BBA98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C7B9846-5F6C-4C92-B98C-8BB9A00BBA98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ACD7267-8A0B-46C0-A681-32F511127B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ACD7267-8A0B-46C0-A681-32F511127B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ACD7267-8A0B-46C0-A681-32F511127B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ACD7267-8A0B-46C0-A681-32F511127B78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
