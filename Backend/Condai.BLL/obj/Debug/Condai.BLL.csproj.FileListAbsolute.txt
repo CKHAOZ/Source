@@ -1,0 +1,7 @@
+D:\2017\Personal\Visual Studio\Source\Backend\Condai.BLL\bin\Debug\Condai.BLL.dll
+D:\2017\Personal\Visual Studio\Source\Backend\Condai.BLL\bin\Debug\Condai.BLL.pdb
+D:\2017\Personal\Visual Studio\Source\Backend\Condai.BLL\bin\Debug\Condai.DAL.dll
+D:\2017\Personal\Visual Studio\Source\Backend\Condai.BLL\bin\Debug\Condai.DAL.pdb
+D:\2017\Personal\Visual Studio\Source\Backend\Condai.BLL\obj\Debug\Condai.BLL.csprojResolveAssemblyReference.cache
+D:\2017\Personal\Visual Studio\Source\Backend\Condai.BLL\obj\Debug\Condai.BLL.dll
+D:\2017\Personal\Visual Studio\Source\Backend\Condai.BLL\obj\Debug\Condai.BLL.pdb

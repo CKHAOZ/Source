@@ -10,6 +10,8 @@ namespace Console.App
     {
         static void Main(string[] args)
         {
+            Condai.BLL.Login d = new Condai.BLL.Login();
+            d.Exec();
         }
     }
 }

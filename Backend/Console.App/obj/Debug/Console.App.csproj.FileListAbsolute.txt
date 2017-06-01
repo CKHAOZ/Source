@@ -1,0 +1,10 @@
+D:\2017\Personal\Visual Studio\Source\Backend\Console.App\bin\Debug\Console.App.exe.config
+D:\2017\Personal\Visual Studio\Source\Backend\Console.App\bin\Debug\Console.App.exe
+D:\2017\Personal\Visual Studio\Source\Backend\Console.App\bin\Debug\Console.App.pdb
+D:\2017\Personal\Visual Studio\Source\Backend\Console.App\bin\Debug\Condai.BLL.dll
+D:\2017\Personal\Visual Studio\Source\Backend\Console.App\bin\Debug\Condai.DAL.dll
+D:\2017\Personal\Visual Studio\Source\Backend\Console.App\bin\Debug\Condai.BLL.pdb
+D:\2017\Personal\Visual Studio\Source\Backend\Console.App\bin\Debug\Condai.DAL.pdb
+D:\2017\Personal\Visual Studio\Source\Backend\Console.App\obj\Debug\Console.App.csprojResolveAssemblyReference.cache
+D:\2017\Personal\Visual Studio\Source\Backend\Console.App\obj\Debug\Console.App.exe
+D:\2017\Personal\Visual Studio\Source\Backend\Console.App\obj\Debug\Console.App.pdb
