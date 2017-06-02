@@ -2,3 +2,4 @@ D:\2017\Personal\Visual Studio\Source\Backend\Condai.DAL\bin\Debug\Condai.DAL.dl
 D:\2017\Personal\Visual Studio\Source\Backend\Condai.DAL\bin\Debug\Condai.DAL.pdb
 D:\2017\Personal\Visual Studio\Source\Backend\Condai.DAL\obj\Debug\Condai.DAL.dll
 D:\2017\Personal\Visual Studio\Source\Backend\Condai.DAL\obj\Debug\Condai.DAL.pdb
+D:\2017\Personal\Visual Studio\Source\Backend\Condai.DAL\obj\Debug\Condai.DAL.csprojResolveAssemblyReference.cache

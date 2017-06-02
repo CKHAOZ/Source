@@ -10,7 +10,15 @@ namespace Condai.BLL
     {
         public void Exec()
         {
-            Condai.DAL.Base.Instance.Execution("Select idUsu from userCondai where idUsu = 1");
+            // For Query
+            Dictionary<int, object> resultQuery = Condai.DAL.Base.Instance.ExecutionQuery("Select idUsu from userCondai");
+
+            // For Stored Procedure
+            Dictionary<string, object> dicParams = new Dictionary<string, object>();
+            dicParams.Add("@idUsu", 1);
+            dicParams.Add("@usuAction", "s");
+
+            Dictionary<int, object> result = Condai.DAL.Base.Instance.ExecutionStoredProcedure("SP_CRUD_USERCONDAI", dicParams);
         }
     }
 }
