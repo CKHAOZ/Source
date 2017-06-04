@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Dynamic;
+using Condai.Tools;
+using System.Linq;
 
 namespace Condai.DAL
 {
@@ -11,13 +13,18 @@ namespace Condai.DAL
         #region [ Attribute ]
 
         private static Base instance;
-        private static string BD = "DBCONDAI";
+        private string DB = "DBCONDAI";
 
         #endregion
 
         #region [ Constructor ]
 
         private Base() { }
+
+        private Base(string db)
+        {
+            this.DB = db;
+        }
 
         #endregion
 
@@ -38,11 +45,11 @@ namespace Condai.DAL
 
         #region [ Methods ]
 
-        public Dictionary<int, object> ExecutionQuery(string query)
+        public List<T> ExecutionQueryList<T>(string query, T entityCondai)
         {
-            Dictionary<int, object> result = new Dictionary<int, object>();
+            List<T> result = new List<T>();
 
-            using (SqlConnection connectionCondai = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings[BD]))
+            using (SqlConnection connectionCondai = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings[DB]))
             {
                 using (SqlCommand commandCondai = new SqlCommand(query, connectionCondai))
                 {
@@ -52,8 +59,8 @@ namespace Condai.DAL
                     {
                         if (readerCondai.HasRows)
                             while (readerCondai.Read())
-                                result.Add(result.Count, SqlDataReaderToObject(readerCondai));
-                        
+                                result.Add(Mapping.Instance.ConvertSqlToEntity<T>(readerCondai, entityCondai));
+
                         readerCondai.Close();
                     }
                 }
@@ -62,11 +69,11 @@ namespace Condai.DAL
             return result;
         }
 
-        public Dictionary<int, object> ExecutionStoredProcedure(string storedProcedure, Dictionary<string, object> parametersCondai)
+        public List<T> ExecutionSPList<T>(string storedProcedure, Dictionary<string, object> parametersCondai, T entityCondai)
         {
-            Dictionary<int, object> result = new Dictionary<int, object>();
+            List<T> result = new List<T>();
 
-            using (SqlConnection connectionCondai = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings[BD]))
+            using (SqlConnection connectionCondai = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings[DB]))
             {
                 using (SqlCommand commandCondai = new SqlCommand(storedProcedure, connectionCondai))
                 {
@@ -74,12 +81,12 @@ namespace Condai.DAL
                     AddParametersToCommand(commandCondai, parametersCondai);
 
                     connectionCondai.Open();
-                    
+
                     using (SqlDataReader readerCondai = commandCondai.ExecuteReader())
                     {
                         if (readerCondai.HasRows)
                             while (readerCondai.Read())
-                                result.Add(result.Count, SqlDataReaderToObject(readerCondai));
+                                result.Add(Mapping.Instance.ConvertSqlToEntity<T>(readerCondai, entityCondai));
 
                         readerCondai.Close();
                     }
@@ -89,123 +96,111 @@ namespace Condai.DAL
             return result;
         }
 
+        public T ExecutionQueryObject<T>(string query, T entityCondai)
+        {
+            using (SqlConnection connectionCondai = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings[DB]))
+            {
+                using (SqlCommand commandCondai = new SqlCommand(query, connectionCondai))
+                {
+                    connectionCondai.Open();
+
+                    using (SqlDataReader readerCondai = commandCondai.ExecuteReader())
+                    {
+                        if (readerCondai.HasRows)
+                        {
+                            readerCondai.Read();
+                            entityCondai = Mapping.Instance.ConvertSqlToEntity<T>(readerCondai, entityCondai);
+                        }
+
+                        readerCondai.Close();
+                    }
+                }
+            }
+
+            return entityCondai;
+        }
+
+        public T ExecutionSPObject<T>(string storedProcedure, Dictionary<string, object> parametersCondai, T entityCondai)
+        {
+            using (SqlConnection connectionCondai = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings[DB]))
+            {
+                using (SqlCommand commandCondai = new SqlCommand(storedProcedure, connectionCondai))
+                {
+                    commandCondai.CommandType = System.Data.CommandType.StoredProcedure;
+                    AddParametersToCommand(commandCondai, parametersCondai);
+
+                    connectionCondai.Open();
+
+                    using (SqlDataReader readerCondai = commandCondai.ExecuteReader())
+                    {
+                        if (readerCondai.HasRows)
+                        {
+                            readerCondai.Read();
+                            entityCondai = Mapping.Instance.ConvertSqlToEntity<T>(readerCondai, entityCondai);
+                        }
+
+                        readerCondai.Close();
+                    }
+                }
+            }
+
+            return entityCondai;
+        }
+
         #endregion
 
         #region [ Functions ]
 
-        private object SqlDataReaderToObject(SqlDataReader readerCondai)
-        {
-            dynamic rowCondai = new ExpandoObject();
-
-            IDictionary<string, object> newProperties = rowCondai;
-
-            for (int i = 0; i < readerCondai.FieldCount; i++)
-            {
-                if (readerCondai.GetName(i) == string.Empty)
-                    throw new Exception("Column name couldn't be null");
-
-                switch (readerCondai.GetValue(i).GetType().Name)
-                {
-                    case "Int16":
-                        newProperties.Add(readerCondai.GetName(i), readerCondai.GetInt16(i));
-                        break;
-
-                    case "Int32":
-                        newProperties.Add(readerCondai.GetName(i), readerCondai.GetInt32(i));
-                        break;
-
-                    case "Int64":
-                        newProperties.Add(readerCondai.GetName(i), readerCondai.GetInt64(i));
-                        break;
-
-                    case "String":
-                        newProperties.Add(readerCondai.GetName(i), readerCondai.GetString(i));
-                        break;
-
-                    case "Boolean":
-                        newProperties.Add(readerCondai.GetName(i), readerCondai.GetBoolean(i));
-                        break;
-
-                    case "Date":
-                    case "DateTime":
-                        newProperties.Add(readerCondai.GetName(i), readerCondai.GetDateTime(i));
-                        break;
-                        
-                    case "Char":
-                        newProperties.Add(readerCondai.GetName(i), readerCondai.GetChar(i));
-                        break;
-
-                    case "Double":
-                        newProperties.Add(readerCondai.GetName(i), readerCondai.GetDouble(i));
-                        break;
-
-                    case "Float":
-                        newProperties.Add(readerCondai.GetName(i), readerCondai.GetFloat(i));
-                        break;
-
-                    case "Decimal":
-                        newProperties.Add(readerCondai.GetName(i), readerCondai.GetDecimal(i));
-                        break;
-
-                    default:
-                        throw new Exception("Column type not implemented yet");
-                }
-            }
-            
-            return rowCondai;
-        }
-
         private void AddParametersToCommand(SqlCommand commandCondai, Dictionary<string, object> parametersCondai)
         {
-            foreach (KeyValuePair<string, object> param in parametersCondai)
+            if (parametersCondai != null && parametersCondai.Count > 0)
             {
-                if (param.Key == null)
-                    throw new Exception("Param name for stored procedure couldn't be null");
-            
-                if (param.Value == null)
-                    throw new Exception("Param value for stored procedure couldn't be null");
-
-                switch (param.Value.GetType().Name)
+                foreach (KeyValuePair<string, object> param in parametersCondai.Where(m => m.Value != null))
                 {
-                    case "Int16":
-                    case "Int32":
-                    case "Int64":
-                        commandCondai.Parameters.Add(param.Key, System.Data.SqlDbType.Int).Value = param.Value;
-                        break;
+                    if (param.Key == null)
+                        throw new Exception("Param name for stored procedure couldn't be null");
 
-                    case "String":
-                        commandCondai.Parameters.Add(param.Key, System.Data.SqlDbType.VarChar).Value = param.Value;
-                        break;
+                    switch (param.Value.GetType().Name)
+                    {
+                        case "Int16":
+                        case "Int32":
+                        case "Int64":
+                            commandCondai.Parameters.Add(param.Key, System.Data.SqlDbType.Int).Value = param.Value;
+                            break;
 
-                    case "Boolean":
-                        commandCondai.Parameters.Add(param.Key, System.Data.SqlDbType.Bit).Value = param.Value;
-                        break;
+                        case "String":
+                            commandCondai.Parameters.Add(param.Key, System.Data.SqlDbType.VarChar).Value = param.Value;
+                            break;
 
-                    case "Date":
-                        commandCondai.Parameters.Add(param.Key, System.Data.SqlDbType.Date).Value = param.Value;
-                        break;
+                        case "Boolean":
+                            commandCondai.Parameters.Add(param.Key, System.Data.SqlDbType.Bit).Value = param.Value;
+                            break;
 
-                    case "DateTime":
-                        commandCondai.Parameters.Add(param.Key, System.Data.SqlDbType.DateTime).Value = param.Value;
-                        break;
+                        case "Date":
+                            commandCondai.Parameters.Add(param.Key, System.Data.SqlDbType.Date).Value = param.Value;
+                            break;
 
-                    case "Char":
-                        commandCondai.Parameters.Add(param.Key, System.Data.SqlDbType.Char).Value = param.Value;
-                        break;
+                        case "DateTime":
+                            commandCondai.Parameters.Add(param.Key, System.Data.SqlDbType.DateTime).Value = param.Value;
+                            break;
 
-                    case "Double":
-                    case "Float":
-                    case "Decimal":
-                        commandCondai.Parameters.Add(param.Key, System.Data.SqlDbType.Decimal).Value = param.Value;
-                        break;
+                        case "Char":
+                            commandCondai.Parameters.Add(param.Key, System.Data.SqlDbType.Char).Value = param.Value;
+                            break;
 
-                    default:
-                        throw new Exception("Column type not implemented yet");
+                        case "Double":
+                        case "Float":
+                        case "Decimal":
+                            commandCondai.Parameters.Add(param.Key, System.Data.SqlDbType.Decimal).Value = param.Value;
+                            break;
+
+                        default:
+                            throw new Exception("Column type not implemented yet");
+                    }
                 }
             }
         }
 
         #endregion
-
     }
 }

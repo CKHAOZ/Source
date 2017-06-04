@@ -3,3 +3,12 @@ D:\2017\Personal\Visual Studio\Source\Backend\Condai.DAL\bin\Debug\Condai.DAL.pd
 D:\2017\Personal\Visual Studio\Source\Backend\Condai.DAL\obj\Debug\Condai.DAL.dll
 D:\2017\Personal\Visual Studio\Source\Backend\Condai.DAL\obj\Debug\Condai.DAL.pdb
 D:\2017\Personal\Visual Studio\Source\Backend\Condai.DAL\obj\Debug\Condai.DAL.csprojResolveAssemblyReference.cache
+C:\DATA\Git\Source\Source\Backend\Condai.DAL\bin\Debug\Condai.DAL.dll
+C:\DATA\Git\Source\Source\Backend\Condai.DAL\bin\Debug\Condai.DAL.pdb
+C:\DATA\Git\Source\Source\Backend\Condai.DAL\obj\Debug\Condai.DAL.csprojResolveAssemblyReference.cache
+C:\DATA\Git\Source\Source\Backend\Condai.DAL\obj\Debug\Condai.DAL.dll
+C:\DATA\Git\Source\Source\Backend\Condai.DAL\obj\Debug\Condai.DAL.pdb
+C:\DATA\Git\Source\Source\Backend\Condai.DAL\bin\Debug\Condai.Entity.dll
+C:\DATA\Git\Source\Source\Backend\Condai.DAL\bin\Debug\Condai.Entity.pdb
+C:\DATA\Git\Source\Source\Backend\Condai.DAL\bin\Debug\Condai.Tools.dll
+C:\DATA\Git\Source\Source\Backend\Condai.DAL\bin\Debug\Condai.Tools.pdb

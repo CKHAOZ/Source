@@ -3,3 +3,8 @@ D:\2017\Personal\Visual Studio\Source\Backend\Condai.Entity\bin\Debug\Condai.Ent
 D:\2017\Personal\Visual Studio\Source\Backend\Condai.Entity\obj\Debug\Condai.Entity.csprojResolveAssemblyReference.cache
 D:\2017\Personal\Visual Studio\Source\Backend\Condai.Entity\obj\Debug\Condai.Entity.dll
 D:\2017\Personal\Visual Studio\Source\Backend\Condai.Entity\obj\Debug\Condai.Entity.pdb
+C:\DATA\Git\Source\Source\Backend\Condai.Entity\bin\Debug\Condai.Entity.dll
+C:\DATA\Git\Source\Source\Backend\Condai.Entity\bin\Debug\Condai.Entity.pdb
+C:\DATA\Git\Source\Source\Backend\Condai.Entity\obj\Debug\Condai.Entity.dll
+C:\DATA\Git\Source\Source\Backend\Condai.Entity\obj\Debug\Condai.Entity.pdb
+C:\DATA\Git\Source\Source\Backend\Condai.Entity\obj\Debug\Condai.Entity.csprojResolveAssemblyReference.cache

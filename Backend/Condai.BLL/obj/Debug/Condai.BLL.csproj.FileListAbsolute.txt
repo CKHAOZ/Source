@@ -5,3 +5,14 @@ D:\2017\Personal\Visual Studio\Source\Backend\Condai.BLL\bin\Debug\Condai.DAL.pd
 D:\2017\Personal\Visual Studio\Source\Backend\Condai.BLL\obj\Debug\Condai.BLL.csprojResolveAssemblyReference.cache
 D:\2017\Personal\Visual Studio\Source\Backend\Condai.BLL\obj\Debug\Condai.BLL.dll
 D:\2017\Personal\Visual Studio\Source\Backend\Condai.BLL\obj\Debug\Condai.BLL.pdb
+C:\DATA\Git\Source\Source\Backend\Condai.BLL\obj\Debug\Condai.BLL.csprojResolveAssemblyReference.cache
+C:\DATA\Git\Source\Source\Backend\Condai.BLL\obj\Debug\Condai.BLL.dll
+C:\DATA\Git\Source\Source\Backend\Condai.BLL\obj\Debug\Condai.BLL.pdb
+C:\DATA\Git\Source\Source\Backend\Condai.BLL\bin\Debug\Condai.BLL.dll
+C:\DATA\Git\Source\Source\Backend\Condai.BLL\bin\Debug\Condai.BLL.pdb
+C:\DATA\Git\Source\Source\Backend\Condai.BLL\bin\Debug\Condai.DAL.dll
+C:\DATA\Git\Source\Source\Backend\Condai.BLL\bin\Debug\Condai.Entity.dll
+C:\DATA\Git\Source\Source\Backend\Condai.BLL\bin\Debug\Condai.DAL.pdb
+C:\DATA\Git\Source\Source\Backend\Condai.BLL\bin\Debug\Condai.Entity.pdb
+C:\DATA\Git\Source\Source\Backend\Condai.BLL\bin\Debug\Condai.Tools.dll
+C:\DATA\Git\Source\Source\Backend\Condai.BLL\bin\Debug\Condai.Tools.pdb

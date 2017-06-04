@@ -54,6 +54,10 @@
       <Project>{50a05845-7240-4c48-b6af-c40338901c89}</Project>
       <Name>Condai.BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Condai.Entity\Condai.Entity.csproj">
+      <Project>{d31a5a4e-0b24-40a5-abde-9c98022e8daa}</Project>
+      <Name>Condai.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

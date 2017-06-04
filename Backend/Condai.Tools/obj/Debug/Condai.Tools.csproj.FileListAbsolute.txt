@@ -2,3 +2,7 @@ D:\2017\Personal\Visual Studio\Source\Backend\Condai.Tools\bin\Debug\Condai.Tool
 D:\2017\Personal\Visual Studio\Source\Backend\Condai.Tools\bin\Debug\Condai.Tools.pdb
 D:\2017\Personal\Visual Studio\Source\Backend\Condai.Tools\obj\Debug\Condai.Tools.dll
 D:\2017\Personal\Visual Studio\Source\Backend\Condai.Tools\obj\Debug\Condai.Tools.pdb
+C:\DATA\Git\Source\Source\Backend\Condai.Tools\bin\Debug\Condai.Tools.dll
+C:\DATA\Git\Source\Source\Backend\Condai.Tools\bin\Debug\Condai.Tools.pdb
+C:\DATA\Git\Source\Source\Backend\Condai.Tools\obj\Debug\Condai.Tools.dll
+C:\DATA\Git\Source\Source\Backend\Condai.Tools\obj\Debug\Condai.Tools.pdb

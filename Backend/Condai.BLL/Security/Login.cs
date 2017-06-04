@@ -3,22 +3,65 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Condai.Entity;
+using System.Reflection;
+using System.Dynamic;
+using System.Data.SqlClient;
 
 namespace Condai.BLL
 {
     public class Login
     {
-        public void Exec()
+        #region [ Attribute ]
+
+        private static Login instance;
+
+        #endregion
+
+        #region [ Constructor ]
+
+        private Login() { }
+
+        #endregion
+
+        #region [ Properties ]
+
+        public static Login Instance
         {
-            // For Query
-            Dictionary<int, object> resultQuery = Condai.DAL.Base.Instance.ExecutionQuery("Select idUsu from userCondai");
+            get
+            {
+                if (instance == null)
+                    instance = new Login();
 
-            // For Stored Procedure
-            Dictionary<string, object> dicParams = new Dictionary<string, object>();
-            dicParams.Add("@idUsu", 1);
-            dicParams.Add("@usuAction", "s");
+                return instance;
+            }
+        }
 
-            Dictionary<int, object> result = Condai.DAL.Base.Instance.ExecutionStoredProcedure("SP_CRUD_USERCONDAI", dicParams);
+        #endregion
+
+        public List<UserCondai> GetUserList()
+        {
+            return Condai.DAL.Login.Instance.GetUserList();
+        }
+
+        public UserCondai GetUser(int idUser)
+        {
+            return Condai.DAL.Login.Instance.GetUser(idUser);
+        }
+
+        public int CreateUser(UserCondai user)
+        {
+            return Condai.DAL.Login.Instance.CreateUser(user);
+        }
+
+        public bool UpdateUser(UserCondai user)
+        {
+            return Condai.DAL.Login.Instance.UpdateUser(user);
+        }
+
+        public bool DeleteUser(int idUser)
+        {
+            return Condai.DAL.Login.Instance.DeleteUser(idUser, false);
         }
     }
 }

@@ -43,9 +43,17 @@
   <ItemGroup>
     <Compile Include="Base\Base.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Login.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Security\" />
+    <ProjectReference Include="..\Condai.Entity\Condai.Entity.csproj">
+      <Project>{d31a5a4e-0b24-40a5-abde-9c98022e8daa}</Project>
+      <Name>Condai.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Condai.Tools\Condai.Tools.csproj">
+      <Project>{f720434c-1680-41f4-8cf6-c4d9af8e10ae}</Project>
+      <Name>Condai.Tools</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

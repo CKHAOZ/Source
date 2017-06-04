@@ -8,3 +8,17 @@ D:\2017\Personal\Visual Studio\Source\Backend\Console.App\bin\Debug\Condai.DAL.p
 D:\2017\Personal\Visual Studio\Source\Backend\Console.App\obj\Debug\Console.App.csprojResolveAssemblyReference.cache
 D:\2017\Personal\Visual Studio\Source\Backend\Console.App\obj\Debug\Console.App.exe
 D:\2017\Personal\Visual Studio\Source\Backend\Console.App\obj\Debug\Console.App.pdb
+C:\DATA\Git\Source\Source\Backend\Console.App\bin\Debug\Console.App.exe.config
+C:\DATA\Git\Source\Source\Backend\Console.App\bin\Debug\Console.App.exe
+C:\DATA\Git\Source\Source\Backend\Console.App\bin\Debug\Console.App.pdb
+C:\DATA\Git\Source\Source\Backend\Console.App\bin\Debug\Condai.BLL.dll
+C:\DATA\Git\Source\Source\Backend\Console.App\bin\Debug\Condai.Entity.dll
+C:\DATA\Git\Source\Source\Backend\Console.App\bin\Debug\Condai.DAL.dll
+C:\DATA\Git\Source\Source\Backend\Console.App\bin\Debug\Condai.BLL.pdb
+C:\DATA\Git\Source\Source\Backend\Console.App\bin\Debug\Condai.Entity.pdb
+C:\DATA\Git\Source\Source\Backend\Console.App\bin\Debug\Condai.DAL.pdb
+C:\DATA\Git\Source\Source\Backend\Console.App\obj\Debug\Console.App.csprojResolveAssemblyReference.cache
+C:\DATA\Git\Source\Source\Backend\Console.App\obj\Debug\Console.App.exe
+C:\DATA\Git\Source\Source\Backend\Console.App\obj\Debug\Console.App.pdb
+C:\DATA\Git\Source\Source\Backend\Console.App\bin\Debug\Condai.Tools.dll
+C:\DATA\Git\Source\Source\Backend\Console.App\bin\Debug\Condai.Tools.pdb
