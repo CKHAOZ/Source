@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Condai.DAL", "..\Backend\Condai.DAL\Condai.DAL.csproj", "{C98AA396-DF8B-480F-B949-DDB29DABA85A}"
 EndProject
@@ -10,8 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Condai.Entity", "..\Backend\Condai.Entity\Condai.Entity.csproj", "{D31A5A4E-0B24-40A5-ABDE-9C98022E8DAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Condai.Tools", "..\Backend\Condai.Tools\Condai.Tools.csproj", "{F720434C-1680-41F4-8CF6-C4D9AF8E10AE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Condai.Rest", "..\Service\Condai.Rest\Condai.Rest.csproj", "{8C7B9846-5F6C-4C92-B98C-8BB9A00BBA98}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console.App", "..\Backend\Console.App\Console.App.csproj", "{8ACD7267-8A0B-46C0-A681-32F511127B78}"
 EndProject
@@ -37,10 +35,6 @@ Global
 		{F720434C-1680-41F4-8CF6-C4D9AF8E10AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F720434C-1680-41F4-8CF6-C4D9AF8E10AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F720434C-1680-41F4-8CF6-C4D9AF8E10AE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8C7B9846-5F6C-4C92-B98C-8BB9A00BBA98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C7B9846-5F6C-4C92-B98C-8BB9A00BBA98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C7B9846-5F6C-4C92-B98C-8BB9A00BBA98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C7B9846-5F6C-4C92-B98C-8BB9A00BBA98}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8ACD7267-8A0B-46C0-A681-32F511127B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8ACD7267-8A0B-46C0-A681-32F511127B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ACD7267-8A0B-46C0-A681-32F511127B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
