@@ -40,3 +40,15 @@ C:\DATA\Git\Source\Source\Service\Condai.WebApi\bin\System.Web.Http.WebHost.xml
 C:\DATA\Git\Source\Source\Service\Condai.WebApi\obj\Debug\Condai.WebApi.csprojResolveAssemblyReference.cache
 C:\DATA\Git\Source\Source\Service\Condai.WebApi\obj\Debug\Condai.WebApi.dll
 C:\DATA\Git\Source\Source\Service\Condai.WebApi\obj\Debug\Condai.WebApi.pdb
+C:\DATA\Git\Source\Source\Service\Condai.WebApi\bin\Microsoft.Owin.Cors.dll
+C:\DATA\Git\Source\Source\Service\Condai.WebApi\bin\Microsoft.Owin.dll
+C:\DATA\Git\Source\Source\Service\Condai.WebApi\bin\Microsoft.Owin.Security.dll
+C:\DATA\Git\Source\Source\Service\Condai.WebApi\bin\Microsoft.Owin.Security.OAuth.dll
+C:\DATA\Git\Source\Source\Service\Condai.WebApi\bin\Owin.dll
+C:\DATA\Git\Source\Source\Service\Condai.WebApi\bin\System.Web.Cors.dll
+C:\DATA\Git\Source\Source\Service\Condai.WebApi\bin\System.Web.Http.Cors.dll
+C:\DATA\Git\Source\Source\Service\Condai.WebApi\bin\Microsoft.Owin.xml
+C:\DATA\Git\Source\Source\Service\Condai.WebApi\bin\Microsoft.Owin.Cors.xml
+C:\DATA\Git\Source\Source\Service\Condai.WebApi\bin\Microsoft.Owin.Security.xml
+C:\DATA\Git\Source\Source\Service\Condai.WebApi\bin\Microsoft.Owin.Security.OAuth.xml
+C:\DATA\Git\Source\Source\Service\Condai.WebApi\bin\System.Web.Http.Cors.xml
